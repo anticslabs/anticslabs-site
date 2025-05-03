@@ -59,17 +59,25 @@
   </header>
 
   <main>
-    <form action="https://formspree.io/f/meogazzy" method="POST">
-      <label>
-        Your email:
-        <input type="email" name="email" required>
-      </label>
-      <label>
-        Your message:
-        <textarea name="message" rows="6" required></textarea>
-      </label>
-      <button type="submit">Send</button>
-    </form>
+   <form
+  action="https://formspree.io/f/meogazzy"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email" required>
+  </label>
+
+  <label>
+    Your message:
+    <textarea name="message" rows="6" required></textarea>
+  </label>
+
+  <!-- 🛡️ Add this line -->
+  <input type="text" name="_gotcha" style="display:none">
+
+  <button type="submit">Send</button>
+</form>
   </main>
 
   <footer>
