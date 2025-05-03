@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support – Antics Labs</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 2rem;
+      background-color: #fdfdfd;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    label {
+      display: flex;
+      flex-direction: column;
+      font-weight: 500;
+    }
+    input, textarea {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 0.75rem;
+      font-size: 1rem;
+      background-color: #007aff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005fcb;
+    }
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Support</h1>
+    <p>Need help with PuttPuttPro? Send us a message and we’ll get back to you soon.</p>
+  </header>
+
+  <main>
+    <form action="https://formspree.io/f/meogazzy" method="POST">
+      <label>
+        Your email:
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Your message:
+        <textarea name="message" rows="6" required></textarea>
+      </label>
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 Antics Labs. All rights reserved.
+  </footer>
+</body>
+</html>
