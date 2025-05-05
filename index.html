@@ -48,8 +48,19 @@
 </head>
 <body>
   <header>
-  <div style="position: relative; display: inline-block;">
-  <img src="anticsLabsLogo.png" alt="Antics Labs Logo" style="width: 100px; border-radius: 22.5%;" />
+  <div style="
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 22.5%;
+  overflow: hidden;
+  display: inline-block;
+">
+  <img
+    src="anticsLabsLogo.png"
+    alt="Antics Labs logo"
+    style="width: 100%; height: 100%; object-fit: cover;"
+  />
   <span style="
     position: absolute;
     top: 2px;
@@ -58,6 +69,9 @@
     font-weight: bold;
     color: #000;
     font-family: sans-serif;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 0 2px;
+    border-radius: 2px;
   ">™</span>
 </div>
     <h1>Antics Labs<sup style="font-size: 0.5em;">™</sup></h1>
