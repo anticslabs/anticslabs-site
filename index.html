@@ -102,6 +102,9 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   ">™</span>
 </div>
+    <div id="ads-flag" style="display: none; background: #ffdddd; color: #b30000; padding: 0.75rem; margin-bottom: 1rem; border-radius: 8px; font-weight: bold;">
+  🚫 Ad free for a limited time
+</div>
   </section>
 
   <section>
@@ -118,5 +121,22 @@
     <a href="terms.html">Terms Of Service</a>
   </p>
   </footer>
+  
+  <script>
+  fetch('/ads.json') // or use the full URL if hosted elsewhere
+    .then(response => {
+      if (!response.ok) throw new Error("Network response was not ok");
+      return response.json();
+    })
+    .then(data => {
+      if (data.adsDisabled) {
+        document.getElementById('ads-flag').style.display = 'block';
+      }
+    })
+    .catch(error => {
+      console.error("Could not load ads.json:", error);
+    });
+</script>
+  
 </body>
 </html>
