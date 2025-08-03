@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PuttPuttPro Terms & Conditions</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+      max-width: 800px;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+      margin-top: 2rem;
+    }
+    p {
+      margin: 0.5rem 0;
+    }
+    ul {
+      margin: 0.5rem 0 1rem 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>PuttPuttPro Terms & Conditions</h1>
+  <p><strong>Effective Date:</strong> [Insert Date]</p>
+
+  <h2>1. Service Overview</h2>
+  <p>PuttPuttPro provides digital scorecard tools, venue listings, branded course pages, promotional placement, and related features to participating mini-golf courses.</p>
+
+  <h2>2. Partner Obligations</h2>
+  <p>You agree to:</p>
+  <ul>
+    <li>Provide accurate business information (e.g., location, contact info, branding assets)</li>
+    <li>Ensure any materials (e.g., logos, photos) you submit are owned by you or properly licensed</li>
+    <li>Notify us of any changes that affect your listing or participation</li>
+  </ul>
+  <p>You may not:</p>
+  <ul>
+    <li>Use the platform for unlawful or misleading purposes</li>
+    <li>Interfere with the operation or security of the app or its users</li>
+  </ul>
+
+  <h2>3. Pricing & Billing</h2>
+  <ul>
+    <li>Plans are billed annually unless otherwise agreed in writing.</li>
+    <li>Early partner program includes a 3-month free trial; full-year pricing applies after unless canceled in writing before the trial ends.</li>
+    <li>Pricing is subject to change for future terms but will not change mid-term.</li>
+    <li>Refunds are not issued after payment is collected.</li>
+  </ul>
+
+  <h2>4. Intellectual Property</h2>
+  <ul>
+    <li>All intellectual property related to the app and Services remains the exclusive property of Antics Labs.</li>
+    <li>Partners retain ownership of their submitted logos, branding, and media assets.</li>
+    <li>By submitting media or branding, you grant us a non-exclusive license to use those assets within the app and in promotional materials.</li>
+  </ul>
+
+  <h2>5. Service Availability</h2>
+  <p>We strive for high availability but do not guarantee uninterrupted service. Scheduled maintenance or outages may occur. We are not responsible for third-party interruptions or internet access issues.</p>
+
+  <h2>6. Termination</h2>
+  <p>You may cancel your subscription at any time. No refunds will be issued after payment. We reserve the right to suspend or terminate access for violation of these Terms.</p>
+
+  <h2>7. Limitation of Liability</h2>
+  <p>To the fullest extent permitted by law, Antics Labs shall not be liable for any indirect, incidental, special, or consequential damages, including loss of revenue or goodwill, arising from use of or inability to use the Services.</p>
+
+  <h2>8. Modifications to Terms</h2>
+  <p>We may modify these Terms at any time. Updated Terms will be posted on this page and will take effect upon posting.</p>
+
+  <h2>9. Governing Law</h2>
+  <p>These Terms are governed by the laws of the State of California. Any legal action must be brought in California state or federal court.</p>
+
+  <h2>10. Contact</h2>
+  <p>Questions about these Terms? Contact us at: <a href="mailto:support@anticslabs.com">support@anticslabs.com</a></p>
+
+</body>
+</html>
