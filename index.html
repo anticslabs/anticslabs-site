@@ -116,14 +116,18 @@
     <p>🤝 <a href="/partners">Partners</a></p>
   </section>
 
-  <footer>
-    <p>
-      &copy; 2025 Antics Labs™ &nbsp; | &nbsp;
-      <a href="/privacy">Privacy Policy</a> &nbsp; | &nbsp;
-      <a href="/legal">Legal Notice</a> &nbsp; | &nbsp;
-      <a href="terms.html">Terms Of Service</a>
-    </p>
-  </footer>
+<footer>
+  <p>
+    &copy; <span id="year"></span> Antics Labs™ &nbsp; | &nbsp;
+    <a href="/privacy">Privacy Policy</a> &nbsp; | &nbsp;
+    <a href="/legal">Legal Notice</a> &nbsp; | &nbsp;
+    <a href="terms.html">Terms Of Service</a>
+  </p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
   <script>
     fetch('/ads.json')
