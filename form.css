@@ -187,6 +187,17 @@ textarea:focus {
   overflow: hidden;
 }
 
+.captcha-field {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.h-captcha {
+  max-width: 100%;
+}
+
 .form-footer {
   display: flex;
   align-items: center;
