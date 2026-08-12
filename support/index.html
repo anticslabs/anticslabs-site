@@ -25,11 +25,14 @@
       <p class="intro">Whether you need help with PuttPuttPro or have a general Antics Labs question, send us the details and we’ll point it in the right direction.</p>
 
       <form class="form-card" data-contact-form>
+        <input type="hidden" name="access_key" value="a3154020-f742-44b4-b671-91b88d8a9ad8" />
+        <input type="hidden" name="subject" value="[Antics Labs] New support request" />
+        <input type="hidden" name="from_name" value="Antics Labs Website" />
         <input type="hidden" name="formType" value="support" />
         <input type="hidden" name="startedAt" value="" />
         <div class="honeypot" aria-hidden="true">
-          <label for="support-website">Website</label>
-          <input id="support-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          <label for="support-botcheck">Leave this field empty</label>
+          <input id="support-botcheck" name="botcheck" type="checkbox" tabindex="-1" />
         </div>
 
         <div class="field-grid">
@@ -59,8 +62,6 @@
           <label for="support-message">What happened, or what do you need?</label>
           <textarea id="support-message" name="message" required maxlength="5000"></textarea>
         </div>
-
-        <div class="turnstile-wrap" data-turnstile></div>
 
         <div class="form-footer">
           <p class="fine-print">Please don’t include passwords or sensitive personal information. By submitting, you acknowledge our <a href="/privacy">Privacy Policy</a>.</p>

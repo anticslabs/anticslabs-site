@@ -6,7 +6,6 @@
   const submitButton = form.querySelector('button[type="submit"]');
   const startedAt = form.querySelector('input[name="startedAt"]');
   const topic = form.querySelector('select[name="topic"]');
-  let turnstileWidgetId = null;
 
   startedAt.value = String(Date.now());
 
@@ -24,40 +23,6 @@
     status.setAttribute('role', isError ? 'alert' : 'status');
   }
 
-  function loadTurnstile(siteKey) {
-    const container = form.querySelector('[data-turnstile]');
-    if (!container || !siteKey) return;
-
-    const renderWidget = function () {
-      turnstileWidgetId = window.turnstile.render(container, {
-        sitekey: siteKey,
-        theme: 'light',
-        size: 'flexible'
-      });
-    };
-
-    if (window.turnstile) {
-      renderWidget();
-      return;
-    }
-
-    const script = document.createElement('script');
-    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
-    script.async = true;
-    script.defer = true;
-    script.onload = renderWidget;
-    document.head.appendChild(script);
-  }
-
-  fetch('/api/form-config')
-    .then(response => response.ok ? response.json() : null)
-    .then(config => {
-      if (config && config.turnstileSiteKey) loadTurnstile(config.turnstileSiteKey);
-    })
-    .catch(() => {
-      // The form can still be reviewed before optional Turnstile is configured.
-    });
-
   form.addEventListener('submit', async function (event) {
     event.preventDefault();
     status.classList.remove('visible', 'error');
@@ -67,22 +32,22 @@
     const payload = Object.fromEntries(new FormData(form).entries());
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
         body: JSON.stringify(payload)
       });
       const result = await response.json().catch(() => ({}));
 
-      if (!response.ok) {
-        throw new Error(result.message || 'Something went wrong. Please try again.');
+      if (!response.ok || result.success !== true) {
+        throw new Error(result.message || result.body?.message || 'Something went wrong. Please try again.');
       }
 
       form.reset();
       startedAt.value = String(Date.now());
-      if (turnstileWidgetId !== null && window.turnstile) {
-        window.turnstile.reset(turnstileWidgetId);
-      }
       showStatus('Thanks—your message has been sent. We’ll be in touch.', false);
     } catch (error) {
       showStatus(error.message || 'Something went wrong. Please try again.', true);

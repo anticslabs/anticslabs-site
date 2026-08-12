@@ -247,10 +247,6 @@ button:disabled {
   color: var(--danger);
 }
 
-.turnstile-wrap:not(:empty) {
-  margin-top: 24px;
-}
-
 .site-footer {
   padding: 30px 0 38px;
   border-top: 1px solid var(--line);
