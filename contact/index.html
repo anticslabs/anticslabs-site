@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Start a conversation with Antics Labs." />
+  <title>Contact | Antics Labs</title>
+  <link rel="stylesheet" href="/form.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Contact navigation">
+      <a class="brand" href="/">
+        <img src="/anticsLabsLogo100.png" alt="" />
+        <span>Antics Labs<sup>™</sup></span>
+      </a>
+      <a class="back-link" href="/">← Back to studio</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="shell">
+      <p class="eyebrow">Studio inquiries</p>
+      <h1>Let’s start a conversation.</h1>
+      <p class="intro">Have an idea, a real-world workflow worth improving, or a thoughtful collaboration in mind? Tell us a little about it.</p>
+
+      <form class="form-card" data-contact-form>
+        <input type="hidden" name="formType" value="studio" />
+        <input type="hidden" name="startedAt" value="" />
+        <div class="honeypot" aria-hidden="true">
+          <label for="contact-website">Website</label>
+          <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div class="field-grid">
+          <div class="field">
+            <label for="contact-name">Name</label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" required maxlength="100" />
+          </div>
+          <div class="field">
+            <label for="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" required maxlength="254" />
+          </div>
+        </div>
+
+        <div class="field-grid full-field">
+          <div class="field">
+            <label for="contact-company">Company or organization <span class="optional">(optional)</span></label>
+            <input id="contact-company" name="company" type="text" autocomplete="organization" maxlength="120" />
+          </div>
+          <div class="field">
+            <label for="contact-topic">What would you like to discuss?</label>
+            <select id="contact-topic" name="topic" required>
+              <option value="">Choose one</option>
+              <option value="product-idea">A product or software idea</option>
+              <option value="workflow">A workflow or operational challenge</option>
+              <option value="partnership">Partnership or collaboration</option>
+              <option value="press">Press or media</option>
+              <option value="general">General inquiry</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field full-field">
+          <label for="contact-message">Tell us a little more</label>
+          <textarea id="contact-message" name="message" required maxlength="5000"></textarea>
+        </div>
+
+        <div class="turnstile-wrap" data-turnstile></div>
+
+        <div class="form-footer">
+          <p class="fine-print">Please don’t include passwords or sensitive personal information. By submitting, you acknowledge our <a href="/privacy">Privacy Policy</a>.</p>
+          <button type="submit">Send message →</button>
+        </div>
+        <p class="form-status" data-form-status></p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <p>&copy; <span data-year></span> Antics Labs™</p>
+      <div class="footer-links"><a href="/support">Support</a><a href="/privacy">Privacy</a><a href="/legal">Legal</a></div>
+    </div>
+  </footer>
+  <script src="/form.js"></script>
+  <script>document.querySelector('[data-year]').textContent = new Date().getFullYear();</script>
+</body>
+</html>

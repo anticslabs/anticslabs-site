@@ -1,88 +1,83 @@
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>Contact support</title>
-    <script async src="https://tally.so/widgets/embed.js"></script>
-    <style type="text/css">
-      html, body {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-      }
-
-      .logo-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 2rem;
-      }
-
-      .logo-container a {
-        text-decoration: none;
-        display: inline-block;
-        width: 100px;
-        height: 100px;
-        position: relative;
-      }
-
-      .logo-container img {
-        width: 100%;
-        height: 100%;
-        display: block;
-      }
-
-      .logo-container span {
-        position: absolute;
-        top: -6px;
-        right: -6px;
-        font-size: 0.65em;
-        font-weight: bold;
-        color: #000;
-      }
-
-      iframe {
-        width: 100%;
-        height: 384px;
-        border: 0;
-        display: block;
-      }
-    </style>
-  </head>
-  <body>
-
-    <!-- Logo -->
-    <div class="logo-container">
-      <a href="/">
-        <img src="/anticsLabsLogo100.png" alt="Antics Labs logo" />
-        <span>™</span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get support from Antics Labs." />
+  <title>Support | Antics Labs</title>
+  <link rel="stylesheet" href="/form.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Support navigation">
+      <a class="brand" href="/">
+        <img src="/anticsLabsLogo100.png" alt="" />
+        <span>Antics Labs<sup>™</sup></span>
       </a>
+      <a class="back-link" href="/">← Back to studio</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="shell">
+      <p class="eyebrow">Product support</p>
+      <h1>How can we help?</h1>
+      <p class="intro">Whether you need help with PuttPuttPro or have a general Antics Labs question, send us the details and we’ll point it in the right direction.</p>
+
+      <form class="form-card" data-contact-form>
+        <input type="hidden" name="formType" value="support" />
+        <input type="hidden" name="startedAt" value="" />
+        <div class="honeypot" aria-hidden="true">
+          <label for="support-website">Website</label>
+          <input id="support-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div class="field-grid">
+          <div class="field">
+            <label for="support-name">Name</label>
+            <input id="support-name" name="name" type="text" autocomplete="name" required maxlength="100" />
+          </div>
+          <div class="field">
+            <label for="support-email">Email</label>
+            <input id="support-email" name="email" type="email" autocomplete="email" required maxlength="254" />
+          </div>
+        </div>
+
+        <div class="field full-field">
+          <label for="support-topic">What can we help with?</label>
+          <select id="support-topic" name="topic" required>
+            <option value="">Choose one</option>
+            <option value="puttputtpro">PuttPuttPro</option>
+            <option value="privacy">Privacy or data request</option>
+            <option value="technical">Website or technical issue</option>
+            <option value="general">General Antics Labs support</option>
+            <option value="other">Something else</option>
+          </select>
+        </div>
+
+        <div class="field full-field">
+          <label for="support-message">What happened, or what do you need?</label>
+          <textarea id="support-message" name="message" required maxlength="5000"></textarea>
+        </div>
+
+        <div class="turnstile-wrap" data-turnstile></div>
+
+        <div class="form-footer">
+          <p class="fine-print">Please don’t include passwords or sensitive personal information. By submitting, you acknowledge our <a href="/privacy">Privacy Policy</a>.</p>
+          <button type="submit">Send message →</button>
+        </div>
+        <p class="form-status" data-form-status></p>
+      </form>
     </div>
+  </main>
 
-    <!-- Tally Form -->
-    <iframe data-tally-src="https://tally.so/embed/wQX2Lp?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" title="Support"></iframe>
-
-    <script>
-      var d = document,
-          w = "https://tally.so/widgets/embed.js",
-          v = function() {
-            if (typeof Tally !== "undefined") {
-              Tally.loadEmbeds();
-            } else {
-              d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e) {
-                e.src = e.dataset.tallySrc;
-              });
-            }
-          };
-
-      if (typeof Tally !== "undefined") {
-        v();
-      } else if (!d.querySelector('script[src="' + w + '"]')) {
-        var s = d.createElement("script");
-        s.src = w;
-        s.onload = v;
-        s.onerror = v;
-        d.body.appendChild(s);
-      }
-    </script>
-
-  </body>
+  <footer class="site-footer">
+    <div class="shell">
+      <p>&copy; <span data-year></span> Antics Labs™</p>
+      <div class="footer-links"><a href="/contact">Contact</a><a href="/privacy">Privacy</a><a href="/legal">Legal</a></div>
+    </div>
+  </footer>
+  <script src="/form.js"></script>
+  <script>document.querySelector('[data-year]').textContent = new Date().getFullYear();</script>
+</body>
 </html>
