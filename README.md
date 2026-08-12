@@ -1,21 +1,21 @@
 # Antics Labs
 
-Welcome to the codebase behind [www.anticslabs.com](https://www.anticslabs.com) — the official home of Antics Labs.
+[Antics Labs](https://www.anticslabs.com) is an independent product studio building focused software for work and play. The studio’s first product is [PuttPuttPro](https://apps.apple.com/us/app/puttputtpro/id6745824559), a focused mini-golf scorekeeper for iPhone.
 
-Antics Labs is a creative playground for experimental app ideas, playful user experiences, and indie development projects. Our goal is to build fun, useful, and occasionally ridiculous tools that surprise and delight.
+## Site
 
-This site is built with static HTML and hosted via [GitHub Pages](https://pages.github.com).
+The site is a lightweight static project built with HTML, CSS, and JavaScript. Cloudflare Pages deploys the `main` branch automatically through the repository’s GitHub integration.
 
----
+Public routes include:
 
-## 🔗 Links
+- [Studio homepage](https://www.anticslabs.com)
+- [Contact](https://www.anticslabs.com/contact)
+- [Support](https://www.anticslabs.com/support)
+- [Privacy](https://www.anticslabs.com/privacy)
+- [Legal](https://www.anticslabs.com/legal)
 
-- [Visit the Site](https://www.anticslabs.com)
-- [Privacy Policy](https://www.anticslabs.com/privacy)
-- [Contact Support](https://www.anticslabs.com/support)
+The repository also contains public JSON and text endpoints used by PuttPuttPro and its advertising configuration. Changes to those files should preserve their filenames and data shape.
 
----
+## License
 
-## 📄 License
-
-MIT — see [LICENSE](./LICENSE) for details.
+Copyright © 2025–present Antics Labs. All rights reserved. See [LICENSE](./LICENSE) for details.
