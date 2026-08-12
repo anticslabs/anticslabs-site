@@ -27,12 +27,6 @@
     event.preventDefault();
     status.classList.remove('visible', 'error');
 
-    const captchaResponse = form.querySelector('[name="h-captcha-response"]');
-    if (!captchaResponse || !captchaResponse.value) {
-      showStatus('Please complete the security check before sending.', true);
-      return;
-    }
-
     submitButton.disabled = true;
     submitButton.textContent = 'Sending…';
 
@@ -55,7 +49,6 @@
 
       form.reset();
       startedAt.value = String(Date.now());
-      if (window.hcaptcha) window.hcaptcha.reset();
       showStatus('Thanks—your message has been sent. We’ll be in touch.', false);
     } catch (error) {
       showStatus(error.message || 'Something went wrong. Please try again.', true);
